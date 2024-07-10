@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import Head from "../components/Header";
 import type { NextPage } from "next";
 import "@/styles/globals.css";
+import "@/styles/tailwind.css";
 import Layout from "../components/Layout";
 
 type NextPageWithLayout = NextPage & {
