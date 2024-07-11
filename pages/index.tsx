@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { use, useCallback, useEffect, useMemo, useState } from "react";
 import { NextPage } from "next";
 import {
   Table,
@@ -47,51 +47,24 @@ const Home: NextPage = () => {
     fetchData();
   }, []);
 
-  const columns = [
-    {
-      key: "name",
-      label: "歌名",
-    },
-    {
-      key: "song",
-      label: "歌手",
-    },
-    {
-      key: "language",
-      label: "语言",
-    },
-    {
-      key: "style",
-      label: "风格",
-    },
-    {
-      key: "sc",
-      label: "SC",
-    },
-    {
-      key: "remark",
-      label: "备注",
-    },
-  ];
   return (
     <div>
       <div className="fixed w-full h-full top-0 left-0 -z-10 object-cover bg-[url(/11.jpg)] bg-cover bg-center bg-no-repeat" />
       <div className="flex flex-col items-center pt-10">
         <Card
           isBlurred
-          className="border-none bg-background/60 dark:bg-default-100/50 "
+          className="border-none bg-background/60 dark:bg-default-100/50 sm:w-[70%] w-full"
           shadow="sm"
         >
           <CardBody>
-            <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
-              <div className="relative col-span-6 md:col-span-4">
+            <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center w-full">
+              <div className="relative col-span-6 md:col-span-4 justify-self-center">
                 <Image
                   alt="Album cover"
                   className="object-cover"
                   height={200}
-                  shadow="md"
+                  shadow="sm"
                   src="/avatar.png"
-                  width="100%"
                 />
               </div>
               <div className="flex flex-col col-span-6 md:col-span-8">
@@ -122,7 +95,7 @@ const Home: NextPage = () => {
         </Card>
         <Card
           isBlurred
-          className="border-none bg-background/60 dark:bg-default-100/50 mt-10"
+          className="border-none bg-background/60 dark:bg-default-100/50 mt-10 md:w-[70%] sm:w-full"
           shadow="sm"
         >
           <CardBody>
@@ -133,12 +106,26 @@ const Home: NextPage = () => {
               removeWrapper
               selectionMode="single"
               color="primary"
-              className="max-h-[50vh] overflow-auto border bg-white bg-opacity-60 rounded-xl"
+              className="max-h-[50vh] w-full overflow-auto border bg-white bg-opacity-60 rounded-xl"
             >
-              <TableHeader columns={columns}>
-                {(column) => (
-                  <TableColumn key={column.key}>{column.label}</TableColumn>
-                )}
+              <TableHeader>
+                <TableColumn key="name">歌名</TableColumn>
+                <TableColumn key="song">歌手</TableColumn>
+                <TableColumn key="language" className="sm:w-1/4 md:w-1/12">
+                  语言
+                </TableColumn>
+                <TableColumn
+                  key="style"
+                  className="hidden sm:table-cell md:w-1/12"
+                >
+                  样式
+                </TableColumn>
+                <TableColumn
+                  key="remark"
+                  className="hidden sm:table-cell md:w-auto"
+                >
+                  备注
+                </TableColumn>
               </TableHeader>
               <TableBody items={data}>
                 {(item) => (
@@ -147,7 +134,15 @@ const Home: NextPage = () => {
                     onClick={() => console.info("-------------")}
                   >
                     {(columnKey) => (
-                      <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                      <TableCell
+                        className={`${
+                          columnKey === "style" || columnKey === "remark"
+                            ? "hidden sm:table-cell"
+                            : ""
+                        }`}
+                      >
+                        {getKeyValue(item, columnKey)}
+                      </TableCell>
                     )}
                   </TableRow>
                 )}
@@ -155,36 +150,6 @@ const Home: NextPage = () => {
             </Table>
           </CardBody>
         </Card>
-
-        {/* <div className="flex flex-col items-center mt-10 p-4 w-3/4 rounded-xl bg-background/60 dark:bg-default-100/50">
-          <TopTable />
-          <Table
-            // isStriped
-            isHeaderSticky
-            removeWrapper
-            selectionMode="single"
-            color="primary"
-            className="max-h-[50vh] overflow-auto border bg-white bg-opacity-60 rounded-xl"
-          >
-            <TableHeader columns={columns}>
-              {(column) => (
-                <TableColumn key={column.key}>{column.label}</TableColumn>
-              )}
-            </TableHeader>
-            <TableBody items={data}>
-              {(item) => (
-                <TableRow
-                  key={item.key}
-                  onClick={() => console.info("-------------")}
-                >
-                  {(columnKey) => (
-                    <TableCell>{getKeyValue(item, columnKey)}</TableCell>
-                  )}
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </div> */}
       </div>
     </div>
   );
