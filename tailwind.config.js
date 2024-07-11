@@ -1,5 +1,11 @@
+const { nextui } = require("@nextui-org/theme");
+
 module.exports = {
-  content: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './pages/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+  ],
   important: true,
   theme: {
     extend: {
@@ -7,7 +13,7 @@ module.exports = {
         max: '1000000000',
       },
       colors: {
-        primary: '#b69067',
+        primary: '#66d9e8',
       },
       keyframes: {
         wiggle: {
@@ -21,8 +27,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-  corePlugins: {
-    preflight: false,
-  },
+  darkMode: "class",
+  plugins: [nextui()],
 };
