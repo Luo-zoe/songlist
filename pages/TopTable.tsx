@@ -18,8 +18,8 @@ const TopTable = () => {
   const [statusFilter, setStatusFilter] = useState("all");
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex justify-between gap-3 items-end">
+    <div className="w-full flex flex-col gap-4 my-6 px-4">
+      <div className="flex gap-3 items-end">
         <Input
           isClearable
           className="w-full sm:max-w-[44%] border-none"
@@ -35,6 +35,7 @@ const TopTable = () => {
               <Button
                 endContent={<ChevronDownIcon className="text-small" />}
                 variant="flat"
+                className="bg-white"
               >
                 Status
               </Button>
@@ -54,33 +55,6 @@ const TopTable = () => {
               ))}
             </DropdownMenu>
           </Dropdown>
-          {/* <Dropdown>
-            <DropdownTrigger className="hidden sm:flex">
-              <Button
-                endContent={<ChevronDownIcon className="text-small" />}
-                variant="flat"
-              >
-                Columns
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu
-              disallowEmptySelection
-              aria-label="Table Columns"
-              closeOnSelect={false}
-              selectedKeys={visibleColumns}
-              selectionMode="multiple"
-              onSelectionChange={setVisibleColumns}
-            >
-              {columns.map((column) => (
-                <DropdownItem key={column.uid} className="capitalize">
-                  {capitalize(column.name)}
-                </DropdownItem>
-              ))}
-            </DropdownMenu>
-          </Dropdown> */}
-          {/* <Button color="primary" endContent={<PlusIcon />}>
-            Add New
-          </Button> */}
         </div>
       </div>
     </div>
