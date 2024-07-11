@@ -2304,6 +2304,13 @@ fraction.js@^4.3.7:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
+framer-motion@^11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.3.0.tgz#dd2fe041577c520b2bf1b136b3ed31f866308f54"
+  integrity sha512-hjYjMUQaWuqilwRr5kC0CunHZFVMtKWHy/IdL/LPRBD0C491DKTvYwQRJ5qRXEAOT+Rth7Vi4XBe4TA4bFOn3A==
+  dependencies:
+    tslib "^2.4.0"
+
 fsevents@~2.3.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
@@ -3056,6 +3063,10 @@ wrap-ansi@^8.1.0:
     ansi-styles "^6.1.0"
     string-width "^5.0.1"
     strip-ansi "^7.0.1"
+
+"xlsx@https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz":
+  version "0.20.2"
+  resolved "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz#0f64eeed3f1a46e64724620c3553f2dbd3cd2d7d"
 
 yaml@^2.3.4:
   version "2.4.5"

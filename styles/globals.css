@@ -13,6 +13,83 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.slick-dots li button::before {
+  color: white !important;
+}
+
+img[alt="github-img"] {
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+a {
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: currentColor;
+
+  &:active {
+    outline: 0;
+  }
+
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.disable-drag {
+  -webkit-user-drag: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold !important;
+}
+
+h2 {
+  font-size: 30px !important;
+}
+
+h3 {
+  font-size: 20px !important;
+}
+input {
+  border-style: none !important;
+}
+
+input.input {
+  color: #a1a1a1;
+  padding: 0 6px;
+}
+
+input.input:focus {
+  color: #1a1a1a;
+  outline: none !important;
+}
+
+pre {
+  white-space: unset !important;
+  overflow-x: auto !important;
 }
