@@ -1,0 +1,14 @@
+name = "apangda"
+type = "javascript"
+
+account_id = "4cf3c2d5af52b1505b5f87316656defd"
+workers_dev = true
+compatibility_date = "2024-07-12"
+node_compat = true
+
+[site]
+bucket = "./public"
+entry-point = "workers-site"
+
+[build]
+command = "yarn build"
