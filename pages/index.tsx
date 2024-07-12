@@ -16,9 +16,11 @@ import {
 } from "@nextui-org/react";
 import TopTable from "./TopTable";
 import XLSX from "xlsx";
+import toast from "react-hot-toast";
 
 const Home: NextPage = () => {
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -37,7 +39,8 @@ const Home: NextPage = () => {
         remark: row[4] || "",
       }));
       setData(formattedData);
-      console.info("----", formattedData);
+      setSearch(formattedData);
+      // console.info("----", formattedData);
     } catch (error) {
       console.error("Error fetching and processing the file", error);
     }
@@ -45,6 +48,14 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     fetchData();
+  }, []);
+
+  const handleSearch = useCallback((query) => {
+    if (query === "") {
+      setSearch(data);
+    } else {
+      setSearch(data.filter((item) => item.name.includes(query)));
+    }
   }, []);
 
   return (
@@ -99,7 +110,7 @@ const Home: NextPage = () => {
           shadow="sm"
         >
           <CardBody>
-            <TopTable />
+            <TopTable onSearch={handleSearch} />
             <Table
               // isStriped
               isHeaderSticky
@@ -127,11 +138,16 @@ const Home: NextPage = () => {
                   备注
                 </TableColumn>
               </TableHeader>
-              <TableBody items={data}>
+              <TableBody items={search}>
                 {(item) => (
                   <TableRow
                     key={item.key}
-                    onClick={() => console.info("-------------")}
+                    onClick={() => {
+                      navigator.clipboard.writeText(`点歌 ${item.name}`);
+                      toast.success(`复制成功! 点歌：${item.name}`, {
+                        duration: 2000,
+                      });
+                    }}
                   >
                     {(columnKey) => (
                       <TableCell
