@@ -1,6 +1,7 @@
 # Apada 的歌单
 
 [https://52panda.fun)
+<img width="1641" alt="image" src="https://github.com/user-attachments/assets/977115f9-81a6-477b-aacb-baf7d8aba656">
 
 ## Getting Started
 
