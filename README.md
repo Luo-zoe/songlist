@@ -1,6 +1,6 @@
 # Apada 的歌单
 
-[https://pangda.netlify.app/](https://pangda.netlify.app/)
+[https://52panda.fun)
 
 ## Getting Started
 
