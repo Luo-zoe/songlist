@@ -160,6 +160,7 @@ class Home extends Component<{}, ParentComponentState> {
                         <li>[点歌要求]</li>
                         <li>[点歌规则]</li>
                         <li>[其他]</li>
+                      </ul>
                       <a
                         className="text-blue-500 no-underline mt-3"
                         href="https://aixiaoyu.fun/%E9%9A%8F%E4%BE%BF%E6%9D%A5%E4%B8%80%E9%A6%96.html"
@@ -168,8 +169,6 @@ class Home extends Component<{}, ParentComponentState> {
                       >
                         不知道听什么？来试试这个吧！（点我点我）
                       </a>
-                      <ul className="list-disc pl-5 space-y-3 text-left mt-3">
-                      </ul>
                     </div>
                   </div>
                 </div>
