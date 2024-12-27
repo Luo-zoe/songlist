@@ -146,21 +146,21 @@ class Home extends Component<{}, ParentComponentState> {
                   <div className="flex justify-between items-start">
                     <div className="flex flex-col gap-0">
                       <h3 className="font-semibold text-foreground/90">
-                        欢迎来到阿胖哒Apanda的歌单
+                        欢迎来到苏米可-miko的歌单
                       </h3>
                       <a
                         className="text-blue-500 no-underline mt-3"
-                        href="https://live.bilibili.com/32503794"
+                        href=""
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        阿胖哒Apanda直播间入口
+                        米可の直播间入口
                       </a>
                       <ul className="list-disc pl-5 space-y-3 text-left mt-3">
-                        <li>带牌子发弹幕/情书点歌：点歌+歌名</li>
-                        <li>每次点歌冷却1分钟</li>
-                        <li>SC置顶歌曲</li>
-                        <li>舰长点歌无限制（7分钟以上的歌限舰长可点）</li>
+                        <li>[点歌要求]</li>
+                        <li>[点歌规则]</li>
+                        <li>[其他]</li>
+                        <li>[其他]</li>
                       </ul>
                     </div>
                   </div>
