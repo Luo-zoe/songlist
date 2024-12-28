@@ -206,7 +206,7 @@ class Home extends Component<{}, ParentComponentState> {
                     key="style"
                     className="hidden sm:table-cell md:w-1/12"
                   >
-                    样式
+                    风格
                   </TableColumn>
                   <TableColumn
                     key="remark"
