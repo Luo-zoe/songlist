@@ -150,16 +150,16 @@ class Home extends Component<{}, ParentComponentState> {
                       </h3>
                       <a
                         className="text-blue-500 no-underline mt-3"
-                        href=""
+                        href="https://v.douyin.com/iy2DWkne/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         米可の直播间入口
                       </a>
                       <ul className="list-disc pl-5 space-y-3 text-left mt-3">
-                        <li>[点歌要求]</li>
-                        <li>[点歌规则]</li>
-                        <li>[其他]</li>
+                        <li>是可爱的miko！</li>
+                        <li>新入团送歌半首哦</li>
+                        <li>可能……不定时唱歌～嘻嘻</li>
                       </ul>
                       <a
                         className="text-blue-500 no-underline mt-3"
