@@ -3,7 +3,7 @@ type = "javascript"
 
 account_id = "19634fe7e428a507fc1e4d13b57b5995"
 workers_dev = true
-compatibility_date = "2024-07-12"
+compatibility_date = "2025-01-02"
 node_compat = true
 
 [site]
