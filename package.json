@@ -9,7 +9,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^5.5.1",
+    "@netlify/plugin-nextjs": "^5.9.2",
     "@nextui-org/react": "^2.4.2",
     "autoprefixer": "^10.4.19",
     "framer-motion": "^11.3.0",
